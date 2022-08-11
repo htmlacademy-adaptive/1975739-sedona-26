@@ -4,16 +4,22 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo">
+    <a class="main-header__logo" href="#">
       <img class="" src="img/logo.svg" width="185" height="96" alt="Седона.">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <!--<button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>-->
+
       <div class="main-nav__wrapper">
+        <input id="main-nav__toggle" type="checkbox">
+        <label class="main-nav__btn" for="main-nav__toggle">
+          <span></span>
+        </label>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a>
@@ -59,11 +65,11 @@
           <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="advantages__item advantages__bonus">
-          <h3 class="advantages-title"> Еда</h3>
+          <h3 class="advantages__title"> Еда</h3>
           <p>Всегда заказывайте топовый фирменный бургер, Вы не разочаруетесь!</p>
         </li>
         <li class="advantages__item advantages__bonus">
-          <h3 class="advantages-title">Сувениры</h3>
+          <h3 class="advantages__title">Сувениры</h3>
           <p>Не только китайского, но и настоящего местного производства!</p>
         </li>
         <li class="advantages__item">
@@ -84,8 +90,8 @@
           <span>— №4 —</span>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="advantages-item">
-          <h3 class="advantages-title no-icon-adv">Мало
+        <li class="advantages__item">
+          <h3 class="advantages__title no-icon-adv">Мало
             <br>туристов
           </h3>
           <span>-№5-</span>
