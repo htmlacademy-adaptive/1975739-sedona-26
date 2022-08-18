@@ -5,9 +5,7 @@
 
 .main-nav__btn {
   display: flex;
-  /* используем flex для центрирования содержимого */
-  align-items: center;
-  /* центрируем содержимое кнопки */
+ align-items: center;
   position: absolute;
   top: 17px;
   right: 20px;
@@ -17,7 +15,6 @@
   z-index: 1;
 }
 
-/* добавляем "гамбургер" */
 .main-nav__btn>span,
 .main-nav__btn>span::before,
 .main-nav__btn>span::after {
@@ -38,7 +35,6 @@
   top: 8px;
 }
 
-/* контейнер меню */
 .main-nav__list {
   display: block;
   position: absolute;
@@ -55,9 +51,7 @@
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 }
 
-/* элементы меню */
 .main-nav__item {
-
   display: block;
   height: 55px;
   border: 1px solid rgba(1, 1, 1, 0.2);
@@ -67,9 +61,7 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-
   color: #FFFFFF;
-
   mix-blend-mode: normal;
   font-family: 'PT Sans';
   font-style: normal;
