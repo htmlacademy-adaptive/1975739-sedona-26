@@ -1,166 +1,137 @@
 .advantages {
   position: relative;
+}
 
-  &__maintitle {
-    font-family: "PT Sans";
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-    margin: 32px 0 0 0;
-  }
+.advantages__maintitle {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  margin: 32px 0 0 0;
+}
 
-  &__maintext {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #333333;
-    margin: 35px 0 16px 0;
-  }
+.advantages__maintext {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 35px 0 16px 0;
+}
 
-  &__divider {
-    position: absolute;
-    z-index: 2;
-    background: url("../img/divider.png");
-    top: 100;
-    width: 320px;
-    height: 37px;
-  }
+.advantages__divider {
+  position: absolute;
+  z-index: 2;
+  background: url("../img/divider.png");
+  top: 100;
+  width: 320px;
+  height: 37px;
+}
 
-  &__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
+.advantages__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-  &__bonus {
-    position: relative;
-  }
+.advantages__title {
+  position: relative;
 
-  &__bonus h3:before {
+  &:before {
     content: "";
     position: absolute;
     top: 25px;
     left: 18px;
   }
 
-  &__bonus--house h3:before {
-    background: url("../img/icon-house.png");
-    width: 39px;
+  &--living:before {
+    background:;
+      width: 39px;
     height: 37px;
   }
 
-  &__bonus--food h3:before {
+  &--food:before {
     background: url("../img/icon-burger.svg.png");
     width: 39px;
     height: 35px;
   }
 
-  &__bonus--gift h3:before {
+  &--gift:before {
     background: url("../img/icon-gift.svg.png");
     width: 32px;
     height: 38px;
   }
 
-  &__bonus--gift p {
-    margin-bottom: 52px;
-  }
+}
 
-  &__item span {
-    margin: 11px 0 0 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    /* identical to box height, or 150% */
+.advantages__number {
+  margin: 11px 0 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}
 
-    display: block;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    color: $white;
-  }
-
-  &__item--blue {
+.advantages__item {
+  &--blue {
     background-color: $lightblue;
   }
 
-  &__item--grey {
-    background: #EEEEEE;
-    padding: 0 18px 0;
+}
+
+
+.advantages__title {
+  margin: 31px 0 0 65px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
 
 
 
-    & h3 {
-      margin: 24px auto 0;
-      text-align: center;
 
+
+.advantages__text {
+  margin: 16px auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  &--grey {
+    width: 284px;
+    padding: 20px 0 24px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $advborder;
     }
 
-    & span {
-      color: #000000;
-      font-weight: 400;
-      font-size: 14px;
+
+    &--icon {
+      margin: 16px 0 0 65px;
     }
 
-    & p {
-      width: 284px;
-      padding: 20px 0 24px;
-      text-align: center;
+    &--white {
+      margin: 17px 0 40px 0;
       font-weight: 400;
       font-size: 14px;
       line-height: 21px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $white;
     }
-
-    &:not(:last-child) p {
-      border-bottom: 1px solid #D6D6D6;
-    }
   }
-
-  &__title {
-    margin: 31px 0 0 65px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 26px;
-    text-transform: uppercase;
-  }
-
-  &__item--grey {
-    background: #EEEEEE;
-    & h3 {}
-  }
-
-  &__title--white {
-    margin: 54px 0 0 0;
-    text-align: center;
-    color: $white;
-  }
-
-  &__text {
-    margin: 16px auto;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-  }
-
-  &__text--icon {
-    margin: 16px 0 0 65px;
-  }
-
-  &__text--white {
-    margin: 17px 0 40px 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    text-transform: uppercase;
-    color: $white;
-  }
-}

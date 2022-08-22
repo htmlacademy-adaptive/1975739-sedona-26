@@ -47,21 +47,20 @@
   padding: 0;
   list-style: none;
   text-align: center;
-  background-color: #ECEFF1;
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  box-shadow: 1px 0px 6px $menushadow;
 }
 
 .main-nav__item {
   display: block;
   height: 55px;
-  border: 1px solid rgba(1, 1, 1, 0.2);
+  border: 1px solid $menuborder;
   background: $lightblue;
   mix-blend-mode: normal;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $white;
   mix-blend-mode: normal;
   font-family: 'PT Sans';
   font-style: normal;
@@ -76,19 +75,19 @@
 
 #main-nav__toggle:checked~.main-nav__btn>span {
   transform: rotate(45deg);
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 #main-nav__toggle:checked~.main-nav__btn>span::before {
   top: 0;
   transform: rotate(0);
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 #main-nav__toggle:checked~.main-nav__btn>span::after {
   top: 0;
   transform: rotate(90deg);
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 #main-nav__toggle:checked~.main-nav__list {
