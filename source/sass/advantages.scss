@@ -44,16 +44,17 @@
 .advantages__title {
   position: relative;
 
+
   &:before {
     content: "";
     position: absolute;
-    top: 25px;
-    left: 18px;
+    top: -10px;
+    left: -50px;
   }
 
   &--living:before {
-    background:;
-      width: 39px;
+    background: url("../img/icon-house.png");
+    width: 39px;
     height: 37px;
   }
 
@@ -68,7 +69,6 @@
     width: 32px;
     height: 38px;
   }
-
 }
 
 .advantages__number {
@@ -80,6 +80,10 @@
   text-align: center;
   text-transform: uppercase;
   color: $white;
+
+  &--black {
+    color: $black;
+  }
 }
 
 .advantages__item {
@@ -87,8 +91,15 @@
     background-color: $lightblue;
   }
 
-}
+  &--grey {
+    background: $graybg;
+    padding: 0 18px 0;
 
+    &:not(:last-child) .advantages__text {
+      border-bottom: 1px solid $advborder;
+    }
+  }
+}
 
 .advantages__title {
   margin: 31px 0 0 65px;
@@ -96,42 +107,49 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+
+  &--white {
+    margin: 54px 0 0 0;
+    text-align: center;
+    color: $white;
+  }
+
+  &--grey {
+    margin: 24px auto 0;
+    text-align: center;
+  }
 }
 
-
-
-
-
 .advantages__text {
-  margin: 16px auto;
+  margin: 16px 0 0 65px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
+
+  &__living {
+    margin: 16px 0 0 65px;
+  }
+
+  &__food {
+    margin: 16px 0 0 65px;
+  }
+
+  &--gift {
+    margin: 16px 0 52px 65px;
+  }
+
+  &--white {
+    margin: 17px 0 40px 0;
+    text-align: center;
+    color: $white;
+  }
 
   &--grey {
+    margin: 16px auto;
     width: 284px;
     padding: 20px 0 24px;
     text-align: center;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $advborder;
-    }
-
-
-    &--icon {
-      margin: 16px 0 0 65px;
-    }
-
-    &--white {
-      margin: 17px 0 40px 0;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 21px;
-      text-align: center;
-      text-transform: uppercase;
-      color: $white;
-    }
   }
+
+}

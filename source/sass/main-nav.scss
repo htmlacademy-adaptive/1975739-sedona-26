@@ -1,6 +1,5 @@
 #main-nav__toggle {
   opacity: 0;
-
 }
 
 .main-nav__btn {
@@ -15,9 +14,9 @@
   z-index: 1;
 }
 
-.main-nav__btn>span,
-.main-nav__btn>span::before,
-.main-nav__btn>span::after {
+.main-nav__btn>.main-nav__spn,
+.main-nav__btn>.main-nav__spn::before,
+.main-nav__btn>.main-nav__spn::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -25,12 +24,12 @@
   background-color: $lightblue;
 }
 
-.main-nav__btn>span::before {
+.main-nav__btn>.main-nav__spn::before {
   content: '';
   top: -8px;
 }
 
-.main-nav__btn>span::after {
+.main-nav__btn>.main-nav__spn::after {
   content: '';
   top: 8px;
 }
@@ -73,18 +72,18 @@
   background-color: $blue;
 }
 
-#main-nav__toggle:checked~.main-nav__btn>span {
+#main-nav__toggle:checked~.main-nav__btn>.main-nav__spn {
   transform: rotate(45deg);
   background-color: $white;
 }
 
-#main-nav__toggle:checked~.main-nav__btn>span::before {
+#main-nav__toggle:checked~.main-nav__btn>.main-nav__spn::before {
   top: 0;
   transform: rotate(0);
   background-color: $white;
 }
 
-#main-nav__toggle:checked~.main-nav__btn>span::after {
+#main-nav__toggle:checked~.main-nav__btn>.main-nav__spn::after {
   top: 0;
   transform: rotate(90deg);
   background-color: $white;
