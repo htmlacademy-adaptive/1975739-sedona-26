@@ -52,6 +52,7 @@
   z-index: 2;
   height: 67px;
 }
+
 .main-header__logo {
   display: block;
   margin: 0 0 0 67px;
@@ -73,9 +74,9 @@
   z-index: 1;
 }
 
-.main-nav__btn > span,
-.main-nav__btn > span::before,
-.main-nav__btn > span::after {
+.main-nav__btn > .main-nav__spn,
+.main-nav__btn > .main-nav__spn::before,
+.main-nav__btn > .main-nav__spn::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -83,12 +84,12 @@
   background-color: #81B3D2;
 }
 
-.main-nav__btn > span::before {
+.main-nav__btn > .main-nav__spn::before {
   content: "";
   top: -8px;
 }
 
-.main-nav__btn > span::after {
+.main-nav__btn > .main-nav__spn::after {
   content: "";
   top: 8px;
 }
@@ -105,7 +106,6 @@
   padding: 0;
   list-style: none;
   text-align: center;
-  background-color: #ECEFF1;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -132,18 +132,18 @@
   background-color: #669EC0;
 }
 
-#main-nav__toggle:checked ~ .main-nav__btn > span {
+#main-nav__toggle:checked ~ .main-nav__btn > .main-nav__spn {
   transform: rotate(45deg);
   background-color: #FFFFFF;
 }
 
-#main-nav__toggle:checked ~ .main-nav__btn > span::before {
+#main-nav__toggle:checked ~ .main-nav__btn > .main-nav__spn::before {
   top: 0;
   transform: rotate(0);
   background-color: #FFFFFF;
 }
 
-#main-nav__toggle:checked ~ .main-nav__btn > span::after {
+#main-nav__toggle:checked ~ .main-nav__btn > .main-nav__spn::after {
   top: 0;
   transform: rotate(90deg);
   background-color: #FFFFFF;
@@ -160,6 +160,7 @@
   position: relative;
   z-index: 0;
 }
+
 .welcome__img {
   position: absolute;
   z-index: 1;
@@ -169,6 +170,7 @@
   left: 19px;
   background: url("../img/text-index.png");
 }
+
 .welcome__divider {
   position: absolute;
   z-index: 2;
@@ -181,6 +183,7 @@
 .advantages {
   position: relative;
 }
+
 .advantages__maintitle {
   font-family: "PT Sans";
   font-weight: 700;
@@ -191,6 +194,7 @@
   color: #000000;
   margin: 32px 0 0 0;
 }
+
 .advantages__maintext {
   font-family: "PT Sans";
   font-style: normal;
@@ -202,6 +206,7 @@
   color: #333333;
   margin: 35px 0 16px 0;
 }
+
 .advantages__divider {
   position: absolute;
   z-index: 2;
@@ -210,50 +215,53 @@
   width: 320px;
   height: 37px;
 }
+
 .advantages__list {
   list-style: none;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.advantages__bonus {
+
+.advantages__title {
   position: relative;
 }
-.advantages__bonus h3:before {
+.advantages__title:before {
   content: "";
   position: absolute;
-  top: 25px;
-  left: 18px;
+  top: -10px;
+  left: -50px;
 }
-.advantages__bonus--house h3:before {
+.advantages__title--living:before {
   background: url("../img/icon-house.png");
   width: 39px;
   height: 37px;
 }
-.advantages__bonus--food h3:before {
+.advantages__title--food:before {
   background: url("../img/icon-burger.svg.png");
   width: 39px;
   height: 35px;
 }
-.advantages__bonus--gift h3:before {
+.advantages__title--gift:before {
   background: url("../img/icon-gift.svg.png");
   width: 32px;
   height: 38px;
 }
-.advantages__bonus--gift p {
-  margin-bottom: 52px;
-}
-.advantages__item span {
+
+.advantages__number {
   margin: 11px 0 0 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  /* identical to box height, or 150% */
   display: block;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.advantages__number--black {
+  color: #000000;
+}
+
 .advantages__item--blue {
   background-color: #81B3D2;
 }
@@ -261,26 +269,10 @@
   background: #EEEEEE;
   padding: 0 18px 0;
 }
-.advantages__item--grey h3 {
-  margin: 24px auto 0;
-  text-align: center;
-}
-.advantages__item--grey span {
-  color: #000000;
-  font-weight: 400;
-  font-size: 14px;
-}
-.advantages__item--grey p {
-  width: 284px;
-  padding: 20px 0 24px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-}
-.advantages__item--grey:not(:last-child) p {
+.advantages__item--grey:not(:last-child) .advantages__text {
   border-bottom: 1px solid #D6D6D6;
 }
+
 .advantages__title {
   margin: 31px 0 0 65px;
   font-weight: 700;
@@ -288,31 +280,42 @@
   line-height: 26px;
   text-transform: uppercase;
 }
-.advantages__item--grey {
-  background: #EEEEEE;
-}
 .advantages__title--white {
   margin: 54px 0 0 0;
   text-align: center;
   color: #FFFFFF;
 }
+.advantages__title--grey {
+  margin: 24px auto 0;
+  text-align: center;
+}
+
 .advantages__text {
-  margin: 16px auto;
+  margin: 16px 0 0 65px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  text-transform: uppercase;
 }
-.advantages__text--icon {
+.advantages__text__living {
   margin: 16px 0 0 65px;
+}
+.advantages__text__food {
+  margin: 16px 0 0 65px;
+}
+.advantages__text--gift {
+  margin: 16px 0 52px 65px;
 }
 .advantages__text--white {
   margin: 17px 0 40px 0;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
   text-align: center;
-  text-transform: uppercase;
   color: #FFFFFF;
+}
+.advantages__text--grey {
+  margin: 16px auto;
+  width: 284px;
+  padding: 20px 0 24px;
+  text-align: center;
 }
 
 .search__title {
@@ -323,17 +326,18 @@
   text-align: center;
   text-transform: uppercase;
 }
-.search p {
+
+.search__text {
   margin: 25px 0 0 0;
   padding: 0 30px 0 29px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  /* or 150% */
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
 }
+
 .search__button {
   margin: 32px auto 49px;
   width: 284px;
@@ -362,6 +366,7 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .footer__social {
   display: flex;
   justify-content: center;
@@ -370,6 +375,7 @@
 .social {
   margin: 33px auto 0;
 }
+
 .social__item {
   width: 48px;
   height: 48px;
@@ -379,13 +385,15 @@
 .social__item:not(:last-child) {
   margin-right: 6px;
 }
-.social__item a {
+
+.social__link {
   width: 48px;
   height: 48px;
   display: flex;
   justify-content: center;
 }
-.social__item svg {
+
+.social__svg {
   align-self: center;
 }
 
@@ -394,7 +402,8 @@
   justify-content: center;
   margin: 47px 0 29px 0;
 }
-.copyright span {
+
+.copyright__text {
   margin-right: 10px;
   font-weight: 400;
   font-size: 14px;
