@@ -1,0 +1,155 @@
+.advantages {
+  position: relative;
+}
+
+.advantages__maintitle {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black;
+  margin: 32px 0 0 0;
+}
+
+.advantages__maintext {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 35px 0 16px 0;
+}
+
+.advantages__divider {
+  position: absolute;
+  z-index: 2;
+  background: url("../img/divider.png");
+  top: 100;
+  width: 320px;
+  height: 37px;
+}
+
+.advantages__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.advantages__title {
+  position: relative;
+
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -50px;
+  }
+
+  &--living:before {
+    background: url("../img/icon-house.png");
+    width: 39px;
+    height: 37px;
+  }
+
+  &--food:before {
+    background: url("../img/icon-burger.svg.png");
+    width: 39px;
+    height: 35px;
+  }
+
+  &--gift:before {
+    background: url("../img/icon-gift.svg.png");
+    width: 32px;
+    height: 38px;
+  }
+}
+
+.advantages__number {
+  margin: 11px 0 0 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+
+  &--black {
+    color: $black;
+  }
+}
+
+.advantages__item {
+  &--blue {
+    background-color: $lightblue;
+  }
+
+  &--grey {
+    background: $graybg;
+    padding: 0 18px 0;
+
+    &:not(:last-child) .advantages__text {
+      border-bottom: 1px solid $advborder;
+    }
+  }
+}
+
+.advantages__title {
+  margin: 31px 0 0 65px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  &--white {
+    margin: 54px 0 0 0;
+    text-align: center;
+    color: $white;
+  }
+
+  &--grey {
+    margin: 24px auto 0;
+    text-align: center;
+  }
+}
+
+.advantages__text {
+  margin: 16px 0 0 65px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  &__living {
+    margin: 16px 0 0 65px;
+  }
+
+  &__food {
+    margin: 16px 0 0 65px;
+  }
+
+  &--gift {
+    margin: 16px 0 52px 65px;
+  }
+
+  &--white {
+    margin: 17px 0 40px 0;
+    text-align: center;
+    color: $white;
+  }
+
+  &--grey {
+    margin: 16px auto;
+    width: 284px;
+    padding: 20px 0 24px;
+    text-align: center;
+  }
+
+}
