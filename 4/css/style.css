@@ -243,6 +243,17 @@
   z-index: 0;
 }
 
+@media (min-width: 768px) {
+  .welcome {
+    background: url("../img/back-desktop.jpg");
+  }
+}
+@media (min-width: 1200px) {
+  .welcome {
+    width: 1200px;
+    background: url("../img/back-desktop-big.jpg") no-repeat;
+  }
+}
 .welcome__img {
   position: absolute;
   z-index: 1;
@@ -253,44 +264,37 @@
   background-image: url("../img/text-index.png");
 }
 
+@media (min-width: 768px) {
+  .welcome__img {
+    left: calc(50% - 231px);
+    top: 77px;
+  }
+}
+@media (min-width: 1200px) {
+  .welcome__img {
+    left: calc(50% - 231px);
+    top: 77px;
+  }
+}
 .welcome__divider {
   position: absolute;
   z-index: 2;
   background-image: url("../img/welcome-divider.png");
-  width: 600px;
+  width: 320px;
   height: 57px;
   bottom: 0;
 }
 
 @media (min-width: 768px) {
-  .welcome {
-    background: url("../img/back-desktop.jpg");
-  }
-
-  .welcome__img {
-    left: calc(50% - 231px);
-    top: 77px;
-  }
-
   .welcome__divider {
     background: url("../img/intro-triangle-desktop.png");
-    width: 1120px;
+    width: 768px;
   }
 }
 @media (min-width: 1200px) {
-  .welcome {
-    width: 1400px;
-    background: url("../img/back-desktop-big.jpg") no-repeat;
-  }
-
-  .welcome__img {
-    left: calc(50% - 231px);
-    top: 77px;
-  }
-
   .welcome__divider {
     background: url("../img/intro-triangle-big.png");
-    width: 1400px;
+    width: 1200px;
   }
 }
 .advantages {
@@ -367,6 +371,12 @@
     padding: 0;
   }
 }
+@media (min-width: 1200px) {
+  .advantages__bonustext {
+    max-width: 185px;
+    margin: 10px 36px 59px 36px;
+  }
+}
 .advantages__title--bonus {
   position: relative;
 }
@@ -397,11 +407,6 @@
   .advantages__title:before {
     top: -55px;
     left: calc(50% - 18px);
-  }
-}
-@media (min-width: 1200px) {
-  .advantages__bonustext {
-    max-width: 185px;
   }
 }
 .advantages__number {
@@ -463,6 +468,14 @@
   .advantages__item--grey {
     max-width: 256px;
     text-align: center;
+  }
+  .advantages__item--blue {
+    width: 256px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages__item--blue {
+    width: 400px;
   }
 }
 .advanatages__image {
@@ -527,21 +540,6 @@
   text-align: center;
 }
 
-@media (min-width: 1200px) {
-  .advantages__bonustext {
-    margin: 10px 36px 59px 36px;
-  }
-}
-@media (min-width: 768px) {
-  .advantages__item--blue {
-    width: 256px;
-  }
-}
-@media (min-width: 1200px) {
-  .advantages__item--blue {
-    width: 400px;
-  }
-}
 .search__title {
   margin: 38px 0 0 0;
   font-weight: 700;
