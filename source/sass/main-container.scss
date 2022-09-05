@@ -5,6 +5,19 @@
   z-index: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .welcome {
+    background: url("../img/back-desktop.jpg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome {
+    width: 1200px;
+    background: url("../img/back-desktop-big.jpg") no-repeat;
+  }
+}
+
 .welcome__img {
   position: absolute;
   z-index: 1;
@@ -15,44 +28,39 @@
   background-image: url("../img/text-index.png");
 }
 
+@media (min-width: $tablet-width) {
+  .welcome__img {
+    left: calc(50% - 231px);
+    top: 77px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome__img {
+    left: calc(50% - 231px);
+    top: 77px;
+  }
+}
+
 .welcome__divider {
   position: absolute;
   z-index: 2;
   background-image: url("../img/welcome-divider.png");
-  width: 600px;
+  width: 320px;
   height: 57px;
   bottom: 0;
 }
 
 @media (min-width: $tablet-width) {
-  .welcome {
-    background: url("../img/back-desktop.jpg");
-  }
-
-  .welcome__img {
-    left: calc(50% - 231px);
-    top: 77px;
-  }
-
   .welcome__divider {
     background: url("../img/intro-triangle-desktop.png");
-    width: 1120px;
+    width: 768px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .welcome {
-    width: 1400px;
-    background: url("../img/back-desktop-big.jpg") no-repeat;
-  }
-
-  .welcome__img {
-    left: calc(50% - 231px);
-    top: 77px;
-  }
-
   .welcome__divider {
     background: url("../img/intro-triangle-big.png");
-    width: 1400px;
+    width: 1200px;
   }
 }

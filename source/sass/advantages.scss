@@ -1,6 +1,5 @@
 .advantages {
   position: relative;
-
 }
 
 .advantages__maintitle {
@@ -40,10 +39,6 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-
-}
-
 .advantages__list {
   list-style: none;
   display: flex;
@@ -81,7 +76,12 @@
   }
 }
 
-@media (min-width: $desktop-width) {}
+@media (min-width: $desktop-width) {
+  .advantages__bonustext {
+    max-width: 185px;
+    margin: 10px 36px 59px 36px;
+  }
+}
 
 .advantages__title--bonus {
   position: relative;
@@ -121,11 +121,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .advantages__bonustext {
-    max-width: 185px;
-  }
-}
+
 
 .advantages__number {
   margin: 11px 0 0 0;
@@ -177,7 +173,6 @@
   }
 
   &--grey {
-
     padding: 0 18px 0;
 
     &:not(:last-child) .advantages__text {
@@ -196,26 +191,33 @@
     &:nth-child(3) {
       display: flex;
     }
+
     &--grey {
       max-width: 256px;
       text-align: center;
+    }
+
+    &--blue {
+      width: 256px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
-
+  .advantages__item--blue {
+    width: 400px;
+  }
 }
+
 .advanatages__image {
   background-image: url("../img/photo-city.jpg");
   width: 320px;
 }
-@media (min-width: $tablet-width) {
 
+@media (min-width: $tablet-width) {
   .advantages__image {
     background-image: url("../img/photo-city-tablet.jpg");
     width: 512px;
-
   }
 }
 
@@ -226,7 +228,6 @@
 }
 
 .advantages__title {
-
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -246,8 +247,6 @@
     margin: 31px 0 0 0;
   }
 }
-
-
 
 .advantages__text {
   margin: 16px 0 0 0;
@@ -279,32 +278,5 @@
     max-width: 284px;
     padding: 20px 0 24px;
     text-align: center;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .advantages__bonustext {
-    // margin: 10px 36px 59px 36px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .advantages__bonustext {
-    margin: 10px 36px 59px 36px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .advantages__item--blue {
-    width: 256px;
-
-
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .advantages__item--blue {
-    width: 400px;
-
   }
 }
