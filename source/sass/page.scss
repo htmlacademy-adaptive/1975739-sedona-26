@@ -4,9 +4,21 @@
 	border: 0;
 	}
 .page {
-    max-width: 320px;
+    width: 320px;
     margin: 0 auto;
     border: 1px solid $lightgray;
     font-family: "PT Sans";
     font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .page {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page {
+    width: 1200px;
+  }
 }

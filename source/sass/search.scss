@@ -39,3 +39,17 @@
     color: $white;
   }
 
+  @media (min-width: $tablet-width) {
+    .search__button  {
+      width: 458px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+      .search__button  {
+        width: 458px;
+      }
+  }
+
+
+

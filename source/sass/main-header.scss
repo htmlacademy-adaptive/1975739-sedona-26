@@ -2,9 +2,26 @@
   position: relative;
   z-index: 2;
   height: 67px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .main-header__logo {
   display: block;
   margin: 0 0 0 67px;
+  height: 96px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header__logo {
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .main-header__logo {
+    margin: 0 auto;
+}
 }

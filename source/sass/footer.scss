@@ -1,4 +1,25 @@
-.footer {}
+.footer {
+  
+
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    margin: 0 120px 0 104px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    margin: 0 120px 0 104px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
 .footer__title {
   margin: 39px 0 0 0;
